@@ -7,7 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{24
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{D4F9F358-6E3B-42FC-A14C-86C4C89B306E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cataolg.API", "Services\Catalog\Cataolg.API\Cataolg.API.csproj", "{63E5998C-7A9E-4790-9C79-82DED7814814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cataolg.API", "Services\Catalog\Cataolg.API\Cataolg.API.csproj", "{63E5998C-7A9E-4790-9C79-82DED7814814}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9F62A82C-7A36-4A4D-B059-39475BC49760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "Core\BuildingBlocks\BuildingBlocks.csproj", "{AA1735C1-F691-421F-A868-931CDF90A32B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{63E5998C-7A9E-4790-9C79-82DED7814814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63E5998C-7A9E-4790-9C79-82DED7814814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63E5998C-7A9E-4790-9C79-82DED7814814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1735C1-F691-421F-A868-931CDF90A32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1735C1-F691-421F-A868-931CDF90A32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1735C1-F691-421F-A868-931CDF90A32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1735C1-F691-421F-A868-931CDF90A32B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4F9F358-6E3B-42FC-A14C-86C4C89B306E} = {2414CAB9-AA58-49EC-B35F-B08428ABECBE}
 		{63E5998C-7A9E-4790-9C79-82DED7814814} = {D4F9F358-6E3B-42FC-A14C-86C4C89B306E}
+		{AA1735C1-F691-421F-A868-931CDF90A32B} = {9F62A82C-7A36-4A4D-B059-39475BC49760}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E29B427-9AD0-45AE-838E-97AD33F94842}
