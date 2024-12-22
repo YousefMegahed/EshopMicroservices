@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,7 +7,12 @@
     <UserSecretsId>65c1e776-2516-4d9e-919a-531dca3c6d21</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Products\GetProductById\GetProductByIdHandler.cs~RF2dc539.TMP" />
+  </ItemGroup>
 
   <ItemGroup>
 	  <PackageReference Include="Carter" Version="8.2.1" />
