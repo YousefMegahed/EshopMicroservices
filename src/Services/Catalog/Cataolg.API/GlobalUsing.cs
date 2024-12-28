@@ -7,3 +7,7 @@ global using Cataolg.API.Models;
 global using Cataolg.API.Exceptions;
 global using FluentValidation;
 global using BuildingBlocks.Exceptions;
+global using BuildingBlocks.Behaviors;
+global using BuildingBlocks.Exceptions.Handler;
+global using Cataolg.API.Data;
+global using Marten.Pagination;
