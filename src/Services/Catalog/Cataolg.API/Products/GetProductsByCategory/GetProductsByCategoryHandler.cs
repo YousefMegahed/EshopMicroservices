@@ -9,14 +9,13 @@ namespace Cataolg.API.Products.CreateProduct
 
 
 
-    public class GetProductsByCategoryHandler(IDocumentSession session,ILogger<GetProductsByCategoryHandlerQuery> logger) 
+    public class GetProductsByCategoryHandler(IDocumentSession session) 
         : IQueryHandler<GetProductsByCategoryHandlerQuery, GetProductsByCategoryResult>
     {
 
 
         public async Task<GetProductsByCategoryResult> Handle(GetProductsByCategoryHandlerQuery query, CancellationToken cancellationToken)
         {
-            logger.LogInformation("GetProductsByCategoryHandlerQuery.Handle called with {@Query}",query);
 
             var products = await session.Query<Product>().Where(c=>c.Category.Contains(query.Category)).ToListAsync();
 

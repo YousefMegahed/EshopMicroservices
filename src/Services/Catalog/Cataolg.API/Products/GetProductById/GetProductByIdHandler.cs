@@ -9,12 +9,11 @@ namespace Cataolg.API.Products.CreateProduct
 
 
 
-    public class GetProductByIdHandler(IDocumentSession session,ILogger<GetProductByIdHandlerQuery> logger) : IQueryHandler<GetProductByIdHandlerQuery, GetProductByIdResult>
+    public class GetProductByIdHandler(IDocumentSession session) : IQueryHandler<GetProductByIdHandlerQuery, GetProductByIdResult>
     {
 
         public async Task<GetProductByIdResult> Handle(GetProductByIdHandlerQuery query, CancellationToken cancellationToken)
         {
-            logger.LogInformation("GetProductByIdHandlerQuery.Handle called with {@Query}", query);
             var product = await session.LoadAsync<Product>(query.Id,cancellationToken);
 
             if (product is null)
