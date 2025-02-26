@@ -18,6 +18,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=BasketDb
+      
     ports:
       - "5433:5432"
     volumes:
@@ -51,6 +52,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ConnectionStrings__Database=Server=basketdb;Port=5432;Database=BasketDb;User Id=postgres;Password=postgres;Include Error Detail=true 
       - ConnectionStrings__Redis=distributedcache:6379
+      - GrpcSettings__DiscountUrl=https://discount.grpc:8081
     depends_on:
      - basketdb
      - distributedcache
