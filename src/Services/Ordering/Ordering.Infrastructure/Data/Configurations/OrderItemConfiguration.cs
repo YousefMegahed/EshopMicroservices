@@ -7,23 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ordering.Domain.ValueObjects;
+using Ordering.Domain.Enum;
 
 namespace Ordering.Infrastructure.Data.Configurations
 {
-    public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
+    public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
     {
-        public void Configure(EntityTypeBuilder<Customer> builder)
+        public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
-            builder.HasKey(c => c.Id);
-            builder.Property(c => c.Id).HasConversion(
-                    customerId => customerId.Value,
-                    dbId => CustomerId.Of(dbId));
+            builder.HasKey(oi => oi.Id);
 
-            builder.Property(c => c.Name).HasMaxLength(100).IsRequired();
+            builder.Property(oi => oi.Id).HasConversion(
+                                       orderItemId => orderItemId.Value,
+                                       dbId => OrderItemId.Of(dbId));
 
-            builder.Property(c => c.Email).HasMaxLength(255);
+            builder.HasOne<Product>()
+                .WithMany()
+                .HasForeignKey(oi => oi.ProductId);
 
-            builder.HasIndex(c => c.Email).IsUnique();
+            builder.Property(oi => oi.Quantity).IsRequired();
+
+            builder.Property(oi => oi.Price).IsRequired();
         }
     }
 }

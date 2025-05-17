@@ -8,15 +8,12 @@ namespace Ordering.Domain.ValueObjects
 {
     public record OrderName
     {
-        public Guid Value { get; }
-        private OrderName(Guid value) => Value = value;
-        public static OrderName Of(Guid value)
+        public string Value { get; }
+        private OrderName(string value) => Value = value;
+        public static OrderName Of(string value)
         {
-            ArgumentNullException.ThrowIfNull(value);
-            if (value == Guid.Empty)
-            {
-                throw new DomainException("OrderId cannot be empty.");
-            }
+            ArgumentException.ThrowIfNullOrWhiteSpace(value);
+
 
             return new OrderName(value);
         }
