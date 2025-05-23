@@ -13,7 +13,7 @@ using Ordering.Infrastructure.Data;
 namespace Ordering.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250516231306_InitalCreate")]
+    [Migration("20250517170747_InitalCreate")]
     partial class InitalCreate
     {
         /// <inheritdoc />
@@ -133,9 +133,10 @@ namespace Ordering.Infrastructure.Data.Migrations
                         {
                             b1.IsRequired();
 
-                            b1.Property<Guid>("Value")
+                            b1.Property<string>("Value")
+                                .IsRequired()
                                 .HasMaxLength(100)
-                                .HasColumnType("uniqueidentifier")
+                                .HasColumnType("nvarchar(100)")
                                 .HasColumnName("OrderName");
                         });
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Ordering.API
 {
@@ -14,6 +15,8 @@ namespace Ordering.API
             //services.AddHealthChecks()
             //    .AddSqlServer(configuration.GetConnectionString("Database")!);
 
+            services.AddMediatR(cf =>
+            cf.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             return services;
         }
     }
