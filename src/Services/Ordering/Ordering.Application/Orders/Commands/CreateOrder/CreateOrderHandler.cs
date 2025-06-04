@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.CQRS;
-using Ordering.Application.Data;
+﻿using Ordering.Application.Data;
 using Ordering.Application.Dtos;
 using Ordering.Domain.Models;
 using Ordering.Domain.ValueObjects;

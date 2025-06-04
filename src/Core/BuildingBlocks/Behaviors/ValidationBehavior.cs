@@ -20,7 +20,7 @@ namespace BuildingBlocks.Behaviors
 
             var validationResults = await Task.WhenAll(validators.Select(c => c.ValidateAsync(context, cancellationToken)));
 
-            var failures = validationResults.Where(c => c.Errors.Count > 0).SelectMany(c=> c.Errors).ToList();
+            var failures = validationResults.Where(c => c.Errors.Count > 0).SelectMany(c => c.Errors).ToList();
 
             if (failures.Count > 0)
                 throw new ValidationException(failures);

@@ -33,13 +33,13 @@ namespace Ordering.Infrastructure.Data.Interceptors
                 if (entry.State == EntityState.Added)
                 {
                     entry.Entity.CreatedBy = "Joo";
-                    entry.Entity.CreatedAt = DateTime.UtcNow;
+                    entry.Entity.CreatedAt = DateTime.Now;
                 }
 
                 if (entry.State == EntityState.Added || entry.State == EntityState.Modified || entry.HasChangedOwnedEntities())
                 {
                     entry.Entity.LastModifiedBy = "Joo";
-                    entry.Entity.LastModified = DateTime.UtcNow;
+                    entry.Entity.LastModified = DateTime.Now;
                 }
             }
         }

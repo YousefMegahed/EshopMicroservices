@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.CQRS;
-using FluentValidation;
+﻿using FluentValidation;
 using Ordering.Application.Dtos;
 using System;
 using System.Collections.Generic;

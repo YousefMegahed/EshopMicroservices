@@ -1,6 +1,4 @@
-﻿
-
-namespace BuildingBlocks.Exceptions;
+﻿namespace BuildingBlocks.Exceptions;
 
 public class NotFoundException : Exception
 {

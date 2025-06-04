@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.CQRS;
-using Ordering.Application.Data;
+﻿using Ordering.Application.Data;
 using Ordering.Application.Exceptions;
 using Ordering.Domain.ValueObjects;
 using System;

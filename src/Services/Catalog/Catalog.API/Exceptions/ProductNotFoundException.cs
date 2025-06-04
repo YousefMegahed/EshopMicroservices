@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.Exceptions;
-using System;
+﻿using System;
 
 namespace Cataolg.API.Exceptions
 {

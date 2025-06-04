@@ -1,8 +1,4 @@
-﻿
-
-
-
-namespace Cataolg.API.Products.CreateProduct
+﻿namespace Cataolg.API.Products.CreateProduct
 {
 
     public record CreateProductCommand(string Name, List<string> Category, string Description, string ImageFile, decimal Price)
