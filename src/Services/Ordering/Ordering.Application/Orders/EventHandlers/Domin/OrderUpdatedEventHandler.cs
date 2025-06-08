@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordering.Application.Orders.EventHandlers
+namespace Ordering.Application.Orders.EventHandlers.Domin
 {
     public class OrderUpdatedEventHandler(ILogger<OrderUpdatedEventHandler> logger)
      : INotificationHandler<OrderUpdatedEvent>

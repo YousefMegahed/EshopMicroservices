@@ -2,6 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using BuildingBlocks.Messaging.MassTransit;
+using Microsoft.FeatureManagement;
+
 
 namespace Ordering.API
 {
@@ -18,6 +21,12 @@ namespace Ordering.API
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
+
+
+            services.AddFeatureManagement();
+
+            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
+
             return services;
         }
     }
